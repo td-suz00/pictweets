@@ -1,0 +1,9 @@
+<div class="contents row" >
+  <% @tweets.each do |tweet| %>
+    <%= render partial: "tweet", locals: { tweet: tweet } %>
+  <% end %>
+
+  <!-- ページネーションのリンクを表示 コントローラで定義したインスタンス変数が引数 -->
+  <%= paginate(@tweets) %>
+
+</div>
